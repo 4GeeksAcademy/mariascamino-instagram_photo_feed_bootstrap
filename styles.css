@@ -1,0 +1,19 @@
+body {
+  font-family: "Bitcount Prop Single Ink", system-ui;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: #dfdfdf;
+    border-bottom: 1px solid #ddd;
+}
+.logo {
+    font-size: 36px;
+    margin-right: 10px;
+}
+
+.post-button {
+    margin-left: auto;
+}
