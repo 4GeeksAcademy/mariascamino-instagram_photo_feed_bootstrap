@@ -11,10 +11,9 @@
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Bitcount+Prop+Single+Ink:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alan+Sans:wght@300..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 
 </head>
@@ -24,7 +23,155 @@
         <div class="logo"><i class="fa-brands fa-instagram"></i></div>
         <div class="logo-name">Instagram</div>
         <div class="post-button">
-            <button type="button" class="btn btn-success">Success</button>
+            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                data-bs-whatever="@mdo">Create new post</button>
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="exampleModalLabel">Create a new post</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <div class="mb-3">
+                                    <label for="recipient-name" class="col-form-label">Caption:</label>
+                                    <textarea class="form-control" id="recipient-name" rows="3"
+                                        placeholder="Add the caption of your post here"></textarea>
+                                </div>
+                                <div class="uploads mb-3">
+                                    <div class="photo-upload">
+                                        <i class="fa-solid fa-camera"></i>
+                                    </div>
+                                    <div class="location-upload">
+                                        <i class="fa-solid fa-location-dot"></i>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-success">Publish</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button type="button" class="btn btn-secondary" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="fa-solid fa-gear"></i>
+                <i class="fa-solid fa-caret-down">
+                </i>
+            </button>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Profile</a></li>
+                <li><a class="dropdown-item" href="#">Accessibility</a></li>
+                <li><a class="dropdown-item" href="#">Privacy and Data</a></li>
+                <li>
+                    <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item text-danger" href="#">Logout</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="grid-toggle">
+        <ul class="nav nav-tabs justify-content-center border-0" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active border-0" id="home-tab" data-bs-toggle="tab"
+                    data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane"
+                    aria-selected="true">
+                    <i class="fa-solid fa-table-cells"></i>
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link border-0" id="profile-tab" data-bs-toggle="tab"
+                    data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane"
+                    aria-selected="false">
+                    <i class="fa-solid fa-square"></i>
+                </button>
+            </li>
+        </ul>
+        <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab"
+                tabindex="0">
+                <div class="container text-center">
+                    <div class="row g-2">
+                        <div class="col">
+                            <img src="https://images.unsplash.com/photo-1484723091739-30a097e8f929?q=80&w=1547&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                class="img-fluid" alt="French toast with berries">
+                            <img src="https://images.unsplash.com/photo-1570051008600-b34baa49e751?q=80&w=1185&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                class="img-fluid" alt="Water and waves">
+                            <img src="https://images.unsplash.com/photo-1708893634094-f6604d94e43f?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                class="img-fluid" alt="Ocean view and sunset">
+                        </div>
+                        <div class="col">
+                            <img src="https://images.unsplash.com/photo-1589287707312-213624549c88?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                class="img-fluid" alt="Abstract painting with faces">
+                            <img src="https://images.unsplash.com/photo-1651613543604-195861551d15?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                class="img-fluid" alt="Mustache man">
+                            <img src="https://images.unsplash.com/photo-1553531768-c85fc0f7033f?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                class="img-fluid" alt="YAY balloons">
+                        </div>
+                        <div class="col">
+                            <img src="https://images.unsplash.com/photo-1528543606781-2f6e6857f318?q=80&w=765&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                class="img-fluid" alt="Running man">
+                            <img src="https://images.unsplash.com/photo-1604076913837-52ab5629fba9?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                class="img-fluid" alt="Purple and red abstract">
+                            <img src="https://images.unsplash.com/photo-1616361986889-3a182ffc7a23?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                class="img-fluid" alt="Fast car porsche">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+                <div class="card mx-auto" style="width: 24rem;">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-title">
+                            <div class="title">Mi desayuno hoy!</div>
+                            <div class="date">08.26</div>
+                        <li class="list-group-image">
+                            <img src="https://images.unsplash.com/photo-1484723091739-30a097e8f929?q=80&w=1547&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                class="img-fluid" alt="French toast with berries">
+                        </li>
+                        <li class="list-group-body">
+                            <p><strong>204 Likes</strong></p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad autem ratione cumque odio
+                                fugit. Quod.</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="card mx-auto" style="width: 24rem;">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-title">
+                            <div class="title">Vi esto cuando caminaba</div>
+                            <div class="date">07.26</div>
+                        <li class="list-group-image">
+                            <img src="https://images.unsplash.com/photo-1589287707312-213624549c88?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                class="img-fluid" alt="Abstract painting with faces">
+                        </li>
+                        <li class="list-group-body">
+                            <p><strong>31 Likes</strong></p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad autem ratione cumque odio
+                                fugit. Quod.</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="card mx-auto" style="width: 24rem;">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-title">
+                            <div class="title">Salí a correr</div>
+                            <div class="date">06.26</div>
+                        <li class="list-group-image">
+                            <img src="https://images.unsplash.com/photo-1528543606781-2f6e6857f318?q=80&w=765&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                class="img-fluid" alt="Running man">
+                        </li>
+                        <li class="list-group-body">
+                            <p><strong>300 Likes</strong></p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad autem ratione cumque odio
+                                fugit. Quod.</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </div>
 </body>
